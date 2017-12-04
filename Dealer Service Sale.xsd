@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 4 U (http://www.xmlspy.com) by Richard Hutcheson (Toyota Australia) -->
+<xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="CONSUMABLES_VALUE" type="xsd:double"/>
+	<xsd:element name="CUST_ADDRESS" type="xsd:string"/>
+	<xsd:element name="CUST_EMAIL" type="xsd:string"/>
+	<xsd:element name="CUST_ID" type="xsd:string"/>
+	<xsd:element name="CUST_MOBILE" type="xsd:string"/>
+	<xsd:element name="CUST_NAME" type="xsd:string"/>
+	<xsd:element name="CUST_PHONE" type="xsd:string"/>
+	<xsd:element name="CUST_POSTCODE" type="xsd:string"/>
+	<xsd:element name="CUST_STATE" type="xsd:string"/>
+	<xsd:element name="CUST_SUBURB" type="xsd:string"/>
+	<xsd:element name="DATA_DATE">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="6"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="DEALER_BRANCH_ID">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="7"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="DEALER_ID">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="3"/>
+				<xsd:maxLength value="6"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="DEALER_SYSTEM">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="80"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="EXTRACTION_DATE">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="6"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="SERVICE_SALE">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="SERVICE_SALE_HEADER"/>
+				<xsd:element ref="SERVICE_SALE_DETAIL" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="SERVICE_SALE_CONTROL"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="MARQUE">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="1"/>
+				<xsd:maxLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="INTERNAL_JOB_COUNT" type="xsd:double"/>
+	<xsd:element name="LAB_HOURS_AVAILABLE" type="xsd:string"/>
+	<xsd:element name="LAB_HOURS_CLOCKED_I" type="xsd:float"/>
+	<xsd:element name="LAB_HOURS_CLOCKED_R" type="xsd:float"/>
+	<xsd:element name="LAB_HOURS_CLOCKED_W" type="xsd:float"/>
+	<xsd:element name="LAB_HOURS_SOLD_I" type="xsd:float"/>
+	<xsd:element name="LAB_HOURS_SOLD_R" type="xsd:float"/>
+	<xsd:element name="LAB_HOURS_SOLD_W" type="xsd:double"/>
+	<xsd:element name="LAB_VALUE_SOLD_I" type="xsd:float"/>
+	<xsd:element name="LAB_VALUE_SOLD_R" type="xsd:float"/>
+	<xsd:element name="LAB_VALUE_SOLD_W" type="xsd:double"/>
+	<xsd:element name="OTHER_CHARGES" type="xsd:string"/>
+	<xsd:element name="PART_UNITS_I" type="xsd:string"/>
+	<xsd:element name="PART_UNITS_R" type="xsd:string"/>
+	<xsd:element name="PART_UNITS_W" type="xsd:string"/>
+	<xsd:element name="PART_VALUE_R" type="xsd:string"/>
+	<xsd:element name="PART_VALUE_W" type="xsd:string"/>
+	<xsd:element name="PART_VALUE_I" type="xsd:string"/>
+	<xsd:element name="SERVICE_ADVISOR_FIRSTNAME">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="80"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="SERVICE_ADVISOR_LASTNAME">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="80"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="SERVICE_ADVISOR_BIRTHDATE">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="8"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="SERVICE_ADVISOR_STAFFCODE">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="10"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="PURCHASES_TO_DATE" type="xsd:float"/>
+	<xsd:element name="RO_NO">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="40"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="JOB_COUNT_R" type="xsd:string"/>
+	<xsd:element name="JOB_COUNT_W" type="xsd:string"/>
+	<xsd:element name="JOB_COUNT_I" type="xsd:string"/>
+	<xsd:element name="SALES_DATE">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="6"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="SERVICE_EVENT">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="6"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="SERVICE_SALE_DETAIL">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="MARQUE"/>
+				<xsd:element ref="DEALER_BRANCH_ID"/>
+				<xsd:element ref="CUST_ID" minOccurs="0"/>
+				<xsd:element ref="CUST_NAME" minOccurs="0"/>
+				<xsd:element ref="CUST_ADDRESS" minOccurs="0"/>
+				<xsd:element ref="CUST_SUBURB" minOccurs="0"/>
+				<xsd:element ref="CUST_STATE" minOccurs="0"/>
+				<xsd:element ref="CUST_POSTCODE"/>
+				<xsd:element ref="CUST_PHONE" minOccurs="0"/>
+				<xsd:element ref="CUST_MOBILE" minOccurs="0"/>
+				<xsd:element ref="CUST_EMAIL" minOccurs="0"/>
+				<xsd:element ref="VIN"/>
+				<xsd:element ref="VEHICLE_MODEL"/>
+				<xsd:element ref="VEHICLE_DELIVERY_DATE" minOccurs="0"/>
+				<xsd:element ref="TRANSIENT_VEHICLE_CODE"/>
+				<xsd:element ref="RO_NO"/>
+				<xsd:element ref="SALES_DATE" minOccurs="0"/>
+				<xsd:element ref="VEHICLE_MILEAGE" minOccurs="0"/>
+				<xsd:element ref="SERVICE_EVENT" minOccurs="0"/>
+				<xsd:element ref="SERVICE_TYPE"/>
+				<xsd:element ref="SERVICE_DESCRIPTION"/>
+				<xsd:element ref="SERVICE_ADVISOR_FIRSTNAME" minOccurs="0"/>
+				<xsd:element ref="SERVICE_ADVISOR_LASTNAME" minOccurs="0"/>
+				<xsd:element ref="SERVICE_ADVISOR_BIRTHDATE" minOccurs="0"/>
+				<xsd:element ref="SERVICE_ADVISOR_STAFFCODE" minOccurs="0"/>
+				<xsd:element ref="PURCHASES_TO_DATE"/>
+				<xsd:element ref="LAB_HOURS_AVAILABLE"/>
+				<xsd:element ref="LAB_HOURS_CLOCKED_R" minOccurs="0"/>
+				<xsd:element ref="LAB_HOURS_CLOCKED_W" minOccurs="0"/>
+				<xsd:element ref="LAB_HOURS_CLOCKED_I" minOccurs="0"/>
+				<xsd:element ref="LAB_HOURS_SOLD_R" minOccurs="0"/>
+				<xsd:element ref="LAB_HOURS_SOLD_W" minOccurs="0"/>
+				<xsd:element ref="LAB_HOURS_SOLD_I" minOccurs="0"/>
+				<xsd:element ref="LAB_VALUE_SOLD_R" minOccurs="0"/>
+				<xsd:element ref="LAB_VALUE_SOLD_W" minOccurs="0"/>
+				<xsd:element ref="LAB_VALUE_SOLD_I" minOccurs="0"/>
+				<xsd:element ref="SUBLET_COUNT_R" minOccurs="0"/>
+				<xsd:element ref="SUBLET_COUNT_W" minOccurs="0"/>
+				<xsd:element ref="SUBLET_COUNT_I" minOccurs="0"/>
+				<xsd:element ref="SUBLET_VALUE_R" minOccurs="0"/>
+				<xsd:element ref="SUBLET_VALUE_W" minOccurs="0"/>
+				<xsd:element ref="SUBLET_VALUE_I" minOccurs="0"/>
+				<xsd:element ref="JOB_COUNT_R" minOccurs="0"/>
+				<xsd:element ref="JOB_COUNT_W" minOccurs="0"/>
+				<xsd:element ref="JOB_COUNT_I" minOccurs="0"/>
+				<xsd:element ref="PART_UNITS_R" minOccurs="0"/>
+				<xsd:element ref="PART_UNITS_W" minOccurs="0"/>
+				<xsd:element ref="PART_UNITS_I" minOccurs="0"/>
+				<xsd:element ref="PART_VALUE_R" minOccurs="0"/>
+				<xsd:element ref="PART_VALUE_W" minOccurs="0"/>
+				<xsd:element ref="PART_VALUE_I" minOccurs="0"/>
+				<xsd:element ref="CONSUMABLES_VALUE" minOccurs="0"/>
+				<xsd:element ref="OTHER_CHARGES" minOccurs="0"/>
+				<xsd:element ref="INVOICE_VALUE"/>
+				<xsd:element ref="TOTAL_JOB_COUNT" minOccurs="0"/>
+				<xsd:element ref="JOB" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="SERVICE_SALE_CONTROL">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="TOTAL_RECORDS"/>
+				<xsd:element ref="TOTAL_INVOICE_VALUE"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="SERVICE_SALE_HEADER">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="SESSION_ID"/>
+				<xsd:element ref="DEALER_ID"/>
+				<xsd:element ref="DATA_DATE"/>
+				<xsd:element ref="DEALER_SYSTEM"/>
+				<xsd:element ref="EXTRACTION_DATE"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="SERVICE_TYPE">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="120"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="SERVICE_DESCRIPTION" type="xsd:string"/>
+	<xsd:element name="SESSION_ID">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="50"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="SUBLET_COUNT_I" type="xsd:float"/>
+	<xsd:element name="SUBLET_COUNT_R" type="xsd:float"/>
+	<xsd:element name="SUBLET_COUNT_W" type="xsd:float"/>
+	<xsd:element name="SUBLET_VALUE_I" type="xsd:float"/>
+	<xsd:element name="SUBLET_VALUE_R" type="xsd:float"/>
+	<xsd:element name="SUBLET_VALUE_W" type="xsd:float"/>
+	<xsd:element name="INVOICE_VALUE" type="xsd:float"/>
+	<xsd:element name="TOTAL_INVOICE_VALUE" type="xsd:float"/>
+	<xsd:element name="TOTAL_RECORDS" type="xsd:decimal"/>
+	<xsd:element name="TRANSIENT_VEHICLE_CODE">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="1"/>
+				<xsd:maxLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="UNITS_VEHICLES" type="xsd:integer"/>
+	<xsd:element name="VEHICLE_DELIVERY_DATE">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="6"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="VEHICLE_MILEAGE">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="8"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="VEHICLE_MODEL">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="120"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="VIN">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="25"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="WARRANTY_JOB_COUNT" type="xsd:double"/>
+	<xsd:element name="JOB_TYPE">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="1"/>
+				<xsd:maxLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="TOTAL_JOB_COUNT" type="xsd:double"/>
+	<xsd:element name="JOB">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="LINE_NO" type="xsd:integer" minOccurs="0"/>
+				<xsd:element ref="JOB_TYPE"/>
+				<xsd:element ref="SERVICE_TYPE"/>
+				<xsd:element ref="SERVICE_DESCRIPTION"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

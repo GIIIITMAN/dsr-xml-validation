@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xsd:element name="ACT_SALES_PRICE" type="xsd:double"/>
+	<xsd:element name="DATA_DATE">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="6"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="DEALER_BRANCH_ID">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="7"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="DEALER_ID">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="3"/>
+				<xsd:maxLength value="6"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="DEALER_SYSTEM">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="80"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="PART_STOCK">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="PART_STOCK_HEADER"/>
+				<xsd:element ref="PART_STOCK_DETAIL" maxOccurs="unbounded"/>
+				<xsd:element ref="PART_STOCK_CONTROL"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="SUPP_CODE">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="1"/>
+				<xsd:maxLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="GROSS_PROFIT" type="xsd:double"/>
+	<xsd:element name="GROSS_PROFIT_PERCENT" type="xsd:double"/>
+	<xsd:element name="PART_NO">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="40"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="QTY" type="xsd:double"/>
+	<xsd:element name="SALES_VALUE" type="xsd:double"/>
+	<xsd:element name="SESSION_ID">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="50"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="EXTRACTION_DATE" type="xsd:string"/>
+	<xsd:element name="PART_STOCK_DETAIL">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="SUPP_CODE"/>
+				<xsd:element ref="DEALER_BRANCH_ID"/>
+				<xsd:element ref="PART_NO"/>
+				<xsd:element ref="QTY"/>
+				<xsd:element ref="UNIT_RRP"/>
+				<xsd:element ref="UNIT_AVG_COSTS"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="PART_STOCK_HEADER">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="SESSION_ID"/>
+				<xsd:element ref="DEALER_ID"/>
+				<xsd:element ref="DATA_DATE"/>
+				<xsd:element ref="DEALER_SYSTEM"/>
+				<xsd:element ref="EXTRACTION_DATE"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="TOTAL_QTY" type="xsd:double"/>
+	<xsd:element name="TOTAL_RECORDS" type="xsd:decimal"/>
+	<xsd:element name="TOTAL_SOH_VALUE" type="xsd:double"/>
+	<xsd:element name="UNIT_AVG_COSTS" type="xsd:float"/>
+	<xsd:element name="UNIT_RRP" type="xsd:float"/>
+	<xsd:element name="PART_STOCK_CONTROL">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="TOTAL_RECORDS"/>
+				<xsd:element ref="TOTAL_QTY"/>
+				<xsd:element ref="TOTAL_SOH_VALUE"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
